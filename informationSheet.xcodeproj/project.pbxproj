@@ -13,6 +13,11 @@
 		AB5339B8285375040048E74D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5339B6285375040048E74D /* Main.storyboard */; };
 		AB5339BA285375040048E74D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB5339B9285375040048E74D /* Assets.xcassets */; };
 		AB5339BD285375040048E74D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5339BB285375040048E74D /* LaunchScreen.storyboard */; };
+		AB8BB42D2858CA5A009F0DF7 /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8BB42C2858CA5A009F0DF7 /* SheetViewController.swift */; };
+		AB8BB42F2858CA96009F0DF7 /* Sheet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB8BB42E2858CA96009F0DF7 /* Sheet.storyboard */; };
+		ABBE9B612863918100767086 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBE9B602863918100767086 /* SwiftUIView.swift */; };
+		ABBE9B642863958900767086 /* StepperView in Frameworks */ = {isa = PBXBuildFile; productRef = ABBE9B632863958900767086 /* StepperView */; };
+		ABBE9B6628639E1500767086 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBE9B6528639E1500767086 /* StepView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,10 @@
 		AB5339B9285375040048E74D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB5339BC285375040048E74D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB5339BE285375040048E74D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB8BB42C2858CA5A009F0DF7 /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
+		AB8BB42E2858CA96009F0DF7 /* Sheet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sheet.storyboard; sourceTree = "<group>"; };
+		ABBE9B602863918100767086 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		ABBE9B6528639E1500767086 /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABBE9B642863958900767086 /* StepperView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,9 +70,13 @@
 				AB5339B2285375040048E74D /* SceneDelegate.swift */,
 				AB5339B4285375040048E74D /* ViewController.swift */,
 				AB5339B6285375040048E74D /* Main.storyboard */,
+				AB8BB42C2858CA5A009F0DF7 /* SheetViewController.swift */,
+				AB8BB42E2858CA96009F0DF7 /* Sheet.storyboard */,
 				AB5339B9285375040048E74D /* Assets.xcassets */,
 				AB5339BB285375040048E74D /* LaunchScreen.storyboard */,
 				AB5339BE285375040048E74D /* Info.plist */,
+				ABBE9B602863918100767086 /* SwiftUIView.swift */,
+				ABBE9B6528639E1500767086 /* StepView.swift */,
 			);
 			path = informationSheet;
 			sourceTree = "<group>";
@@ -77,12 +91,16 @@
 				AB5339A9285375040048E74D /* Sources */,
 				AB5339AA285375040048E74D /* Frameworks */,
 				AB5339AB285375040048E74D /* Resources */,
+				AB3570962858C29D00466968 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = informationSheet;
+			packageProductDependencies = (
+				ABBE9B632863958900767086 /* StepperView */,
+			);
 			productName = informationSheet;
 			productReference = AB5339AD285375040048E74D /* informationSheet.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +129,9 @@
 				Base,
 			);
 			mainGroup = AB5339A4285375040048E74D;
+			packageReferences = (
+				ABBE9B622863958900767086 /* XCRemoteSwiftPackageReference "StepperView" */,
+			);
 			productRefGroup = AB5339AE285375040048E74D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB8BB42F2858CA96009F0DF7 /* Sheet.storyboard in Resources */,
 				AB5339BD285375040048E74D /* LaunchScreen.storyboard in Resources */,
 				AB5339BA285375040048E74D /* Assets.xcassets in Resources */,
 				AB5339B8285375040048E74D /* Main.storyboard in Resources */,
@@ -133,14 +155,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AB3570962858C29D00466968 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AB5339A9285375040048E74D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB8BB42D2858CA5A009F0DF7 /* SheetViewController.swift in Sources */,
 				AB5339B5285375040048E74D /* ViewController.swift in Sources */,
+				ABBE9B6628639E1500767086 /* StepView.swift in Sources */,
 				AB5339B1285375040048E74D /* AppDelegate.swift in Sources */,
 				AB5339B3285375040048E74D /* SceneDelegate.swift in Sources */,
+				ABBE9B612863918100767086 /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +332,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7F3CTHW22L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = informationSheet/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -314,6 +360,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7F3CTHW22L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = informationSheet/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -356,6 +403,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ABBE9B622863958900767086 /* XCRemoteSwiftPackageReference "StepperView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/badrinathvm/StepperView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ABBE9B632863958900767086 /* StepperView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABBE9B622863958900767086 /* XCRemoteSwiftPackageReference "StepperView" */;
+			productName = StepperView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AB5339A5285375040048E74D /* Project object */;
 }
