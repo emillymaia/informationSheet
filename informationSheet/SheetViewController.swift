@@ -30,7 +30,6 @@ class SheetViewController: UIViewController, UISheetPresentationControllerDelega
             .medium(),
             .large()]
     }
-    
     fileprivate func setupConstraints() {
         swiftUIController.view.translatesAutoresizingMaskIntoConstraints = false
         swiftUIController.view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
